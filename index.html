@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EduDov - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #f7f8fb, #e0f2fe, #f1f5f9);
+    color: #0f172a;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 20px;
+    color: #1f2937;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #e0f2fe;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    align-items: center;
+}
+
+/* SLIDESHOW */
+.slideshow img {
+    width: 100%;
+    height: 320px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* SECTIONS */
+.section {
+    background: white;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #3b82f6;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* COLORS */
+.blue { border-left-color:#3b82f6; }
+.green { border-left-color:#10b981; }
+.orange { border-left-color:#f59e0b; }
+.red { border-left-color:#ef4444; }
+.purple { border-left-color:#8b5cf6; }
+
+/* NOTICE */
+.notice {
+    background: #dbeafe;
+    border-left: 5px solid #2563eb;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* DAILY BOX */
+.daily {
+    background: #ecfeff;
+    border-left: 5px solid #06b6d4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* QUOTE */
+.quote {
+    text-align: center;
+    font-style: italic;
+    color: #374151;
+}
+
+/* PROGRESS BAR */
+.bar {
+    background: #e5e7eb;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #1f2937;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>✨ EduDov</h1>
+<p>📘 Learn. Revise. Succeed.</p>
+</header>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="subjects.html">📚 Subjects</a>
+<a href="study-tools.html">🧠 Tools</a>
+<a href="community.html">💬 Community</a>
+<a href="about.html">ℹ️ About</a>
+</nav>
+
+<div class="container">
+
+<!-- HERO + SLIDESHOW -->
+<div class="hero">
+
+    <div class="slideshow">
+        <img id="slide" src="images/students1.jpg" alt="Students">
+    </div>
+
+    <div>
+        <h2>🚀 Welcome Back!</h2>
+        <p>
+            EduDov helps students revise smarter, stay organised,
+            and succeed in school.
+        </p>
+
+        <div class="daily">
+            🎯 Today’s Focus: Maths + English Revision
+        </div>
+    </div>
+
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div class="section notice">
+<strong>📢 Update:</strong> New quizzes added for all subjects!
+</div>
+
+<!-- QUICK START -->
+<div class="section">
+<h2>⚡ Quick Start</h2>
+
+<div class="grid">
+
+<a href="subjects.html" class="card-link">
+<div class="card blue">
+📚 Subjects
+</div>
+</a>
+
+<a href="study-tools.html" class="card-link">
+<div class="card green">
+🧠 Quizzes
+</div>
+</a>
+
+<a href="notes.html" class="card-link">
+<div class="card orange">
+📖 Notes
+</div>
+</a>
+
+<a href="community.html" class="card-link">
+<div class="card purple">
+💬 Community
+</div>
+</a>
+
+</div>
+</div>
+
+<!-- SUBJECTS -->
+<div class="section">
+<h2>📘 Subjects Preview</h2>
+
+<div class="grid">
+
+<a href="english.html" class="card-link">
+<div class="card blue">
+English 📘
+</div>
+</a>
+
+<a href="maths.html" class="card-link">
+<div class="card green">
+Maths 📊
+</div>
+</a>
+
+<a href="accounting.html" class="card-link">
+<div class="card orange">
+Accounting 💰
+</div>
+</a>
+
+<a href="economics.html" class="card-link">
+<div class="card red">
+Economics 📈
+</div>
+</a>
+
+<a href="computer.html" class="card-link">
+<div class="card purple">
+Computer 💻
+</div>
+</a>
+
+</div>
+</div>
+
+<!-- PROGRESS -->
+<div class="section">
+<h2>📊 Your Progress</h2>
+
+<p>English</p>
+<div class="bar">
+<div class="fill" style="width:70%; background:#3b82f6;">70%</div>
+</div>
+
+<p>Maths</p>
+<div class="bar">
+<div class="fill" style="width:55%; background:#10b981;">55%</div>
+</div>
+
+<p>Accounting</p>
+<div class="bar">
+<div class="fill" style="width:40%; background:#f59e0b;">40%</div>
+</div>
+
+<p>Computer</p>
+<div class="bar">
+<div class="fill" style="width:80%; background:#8b5cf6;">80%</div>
+</div>
+</div>
+
+<!-- STUDY RESOURCES -->
+<div class="section">
+<h2>🌐 Study Resources</h2>
+
+<div class="grid">
+
+<a href="https://www.khanacademy.org" target="_blank" class="card-link">
+<div class="card blue">📘 Khan Academy</div>
+</a>
+
+<a href="https://www.w3schools.com" target="_blank" class="card-link">
+<div class="card green">📊 W3Schools</div>
+</a>
+
+<a href="https://www.bbc.co.uk/bitesize" target="_blank" class="card-link">
+<div class="card orange">📖 BBC Bitesize</div>
+</a>
+
+<a href="https://quizlet.com" target="_blank" class="card-link">
+<div class="card purple">🧠 Quizlet</div>
+</a>
+
+</div>
+</div>
+
+<!-- EDUCATIONAL VIDEOS -->
+<div class="section">
+<h2>🎥 Learning Videos</h2>
+
+<div class="grid">
+
+<div class="card blue">
+<h3>📘 Maths Revision</h3>
+
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/1srQ7Mq_ToI"
+title="Maths Video"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="card green">
+<h3>💻 Computer Basics</h3>
+
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/zOjov-2OZ0E"
+title="Computer Video"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+</div>
+
+<!-- DAILY CHALLENGE -->
+<div class="section daily">
+<h2>🎯 Daily Challenge</h2>
+<p>✔ Solve 5 Maths questions</p>
+<p>✔ Write 1 English paragraph</p>
+<p>✔ Learn 1 Computer term</p>
+</div>
+
+<!-- MOTIVATION -->
+<div class="section quote">
+“Small progress every day leads to big success.” 🚀
+</div>
+
+</div>
+
+<footer>
+<p>📧 edudov.project@gmail.com</p>
+<p>© 2026 EduDov</p>
+</footer>
+
+<script>
+const images = [
+"images1.jpg",
+"images2.jpg"
+];
+
+let i = 0;
+
+setInterval(() => {
+    i = (i + 1) % images.length;
+    document.getElementById("slide").src = images[i];
+}, 3000);
+</script>
+
+</body>
+</html>

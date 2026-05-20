@@ -1,0 +1,500 @@
+/* Canva-inspired Theme: Clean, flat, airy, with soft shadows */
+
+/* Palette & typography */
+:root {
+    --bg: #f7f8fb;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+
+    --primary: #2b59c3;      /* Canva-like blue */
+    --primary-dark: #1e3a8a; /* hover/shadow accent */
+    --accent: #3b82f6;
+    --card: #ffffff;
+    --line: rgba(0,0,0,.08);
+    --shadow: 0 6px 20px rgba(0,0,0,.08);
+    --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+/* Global reset-ish baseline */
+html { font-family: Inter, Roboto, Arial, sans-serif; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* Layout containers that feel like a Canva canvas */
+.app-shell {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100%;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    text-align: center;
+    padding: 28px 16px;
+    letter-spacing: .2px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+header p.subtitle {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: .92;
+}
+
+/* Clean, centered nav */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1f2a44;
+    padding: 12px 8px;
+    gap: 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform .2s ease, background .2s ease;
+}
+nav a:hover { background: rgba(255,255,255,.08); transform: translateY(-1px); }
+nav a.active { background: rgba(255,255,255,.18); }
+
+/* Canvas-like content container (the "design canvas") */
+.container {
+    width: min(1100px, 92%);
+    margin: 28px auto;
+    display: grid;
+    gap: 28px;
+}
+
+.section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+}
+
+/* HERO / hero-like area */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+.hero .copy {
+    padding: 6px 0;
+}
+.hero h2 {
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+.hero p {
+    color: var(--muted);
+    margin: 0;
+}
+.hero .cta {
+    margin-top: 12px;
+}
+.button {
+    background: var(--primary);
+    color: #fff;
+    border: 0;
+    padding: 12px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform .2s ease, background .2s ease;
+}
+.button:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+/* Grid system with Canva-like card blocks */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,.05);
+    border: 1px solid var(--line);
+}
+.card h3 { margin: 6px 0 8px; font-size: 16px; }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+
+/* form controls (inputs, textarea) with Canva-like spacing */
+input, textarea {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+}
+textarea { resize: vertical; min-height: 110px; }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary);
+}
+.btn.secondary {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+.btn:hover { transform: translateY(-1px); }
+
+/* Carousel / media blocks */
+.carousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+.carousel img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.quote {
+    text-align: center;
+    padding: 22px;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary);
+    font-style: italic;
+    color: #374151;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+/* ABOUT PAGE styles (canva-like cards) */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+.profile-card, .about-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+}
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--primary);
+    display: block;
+    margin: 0 auto 12px;
+    transition: transform .3s ease;
+}
+.profile-img:hover { transform: scale(1.05); }
+
+/* ABOUT header block styling */
+.about-header {
+    text-align: center;
+    padding: 28px 16px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2b59c3, #3b82f6);
+    color: white;
+}
+.about-header h2 { margin: 0; }
+
+/* SPACING helpers to mimic Canva canvas groups */
+.spacer { height: 6px; }
+
+/* POSTS / content blocks for a blog-like feel */
+.post {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.post + .post { margin-top: 12px; }
+.post small { color: var(--muted); }
+
+/* FOOTER */
+footer {
+    background: #1f2a44;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+footer p { margin: 6px 0; }
+
+/* RESPONSIVE tweaks: adapt to smaller canvases like Canva editor widths */
+@media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .about-container { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    nav { overflow-x: auto; white-space: nowrap; }
+    .grid { grid-template-columns: 1fr; }
+    .container { width: 94%; padding: 0 0 6px; }
+}
+:root {
+    --accent-2: #f59e0b;   /* warm orange */
+    --accent-3: #10b981;   /* teal/green */
+    --accent-4: #ef4444;   /* soft red */
+}
+.section:nth-child(1) { background: #ffffff; }
+.section:nth-child(2) { background: #f0f7ff; }
+.section:nth-child(3) { background: #fef6e4; }
+.section:nth-child(4) { background: #ecfdf5; }
+
+.card:nth-child(1) { border-top: 4px solid var(--primary); }
+.card:nth-child(2) { border-top: 4px solid var(--accent-2); }
+.card:nth-child(3) { border-top: 4px solid var(--accent-3); }
+.card:nth-child(4) { border-top: 4px solid var(--accent-4); }
+;
+}
+.post:nth-child(1) { border-left-color: var(--primary); }
+.post:nth-child(2) { border-left-color: var(--accent-2); }
+.post:nth-child(3) { border-left-color: var(--accent-3); }
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+#slide {
+    transition: opacity 0.4s ease;
+}
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BACKGROUND (CANVA-STYLE GRADIENT) */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c6ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* LOGOUT BUTTON */
+nav button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ff4d6d;
+    color: white;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #ff1e4d;
+}
+
+/* CONTENT */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* SUBJECT CARDS (CANVA STYLE) */
+.subject-card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.subject-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* TOP BUTTON */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 50px;
+    background: #ffffff;
+    color: #2575fc;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.story-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.subject p{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #4b5563;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    margin-top: 30px;
+}
+/* FOOTER */
+.footer {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-item {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255,255,255,0.4);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+.footer-content{
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-divider{
+    width: 60px;
+    height: 1px;
+}
+
+}

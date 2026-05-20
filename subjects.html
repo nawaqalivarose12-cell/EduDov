@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EduDov - Subjects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #f7f8fb, #e0f2fe, #f1f5f9);
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 20px;
+    color: #1f2937;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #e0f2fe;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* SUBJECT CARD */
+.subject {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.subject:hover {
+    transform: scale(1.05);
+}
+
+/* COLORS */
+.eng { border-left: 5px solid #3b82f6; }
+.math { border-left: 5px solid #10b981; }
+.acc { border-left: 5px solid #f59e0b; }
+.eco { border-left: 5px solid #ef4444; }
+.com { border-left: 5px solid #8b5cf6; }
+
+/* CONTENT BOX */
+.content-box {
+    display: none;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* BACK BUTTON */
+.back {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* BOTTOM SECTIONS */
+.section {
+    background: white;
+    margin: 20px auto;
+    padding: 18px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #1f2937;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📚 EduDov Subjects</h1>
+<p>Tap a subject to explore lessons, activities & notes</p>
+</header>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="subjects.html">📚 Subjects</a>
+<a href="study-tools.html">🧠 Study Tools</a>
+<a href="community.html">💬 Community</a>
+<a href="about.html">ℹ️ About</a>
+</nav>
+
+<!-- SUBJECT MENU -->
+<div id="menu" class="grid">
+
+<div class="subject eng" onclick="openSub('english')">📘 English</div>
+<div class="subject math" onclick="openSub('maths')">📊 Maths</div>
+<div class="subject acc" onclick="openSub('accounting')">💰 Accounting</div>
+<div class="subject eco" onclick="openSub('economics')">📈 Economics</div>
+<div class="subject com" onclick="openSub('computer')">💻 Computer</div>
+
+</div>
+
+<!-- ENGLISH -->
+<div id="english" class="content-box">
+<button class="back" onclick="back()">⬅ Back</button>
+<h2 style="color:#3b82f6;">📘 English</h2>
+<p>📌 Topic: Grammar & Writing Skills</p>
+<!-- ENGLISH ARTICLE -->
+<a href="https://www.bbc.co.uk/bitesize/subjects/z3kw2hv" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="subject eng">
+<h3>📘 English Article</h3>
+<p>Improve grammar, reading, and writing skills with beginner-friendly lessons.</p>
+</div>
+</a>
+
+<h3>🧠 Activity</h3>
+<p>Write a paragraph about your favourite movie or book.</p>
+
+<h3>📌 Notes</h3>
+<p>English improves communication, writing, and comprehension skills.</p>
+</div>
+
+<!-- MATHS -->
+<div id="maths" class="content-box">
+<button class="back" onclick="back()">⬅ Back</button>
+<h2 style="color:#10b981;">📊 Maths</h2>
+<p>📌 Topic: Algebra Basics</p>
+<!-- MATHS ARTICLE -->
+<a href="https://www.khanacademy.org/math" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="subject math">
+<h3>📊 Maths Article</h3>
+<p>Learn algebra, equations, graphs, and problem-solving techniques.</p>
+</div>
+</a>
+<div class="card blue">
+<h3>📘 Maths Revision</h3>
+
+<iframe width="100%" height="200"
+src=https://youtube.com/embed/1srQ7Mq_ToI
+title="Maths Video"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h3>🧠 Activity</h3>
+<p>Solve: 3x + 7 = 22</p>
+
+<h3>📌 Notes</h3>
+<p>Maths builds logical thinking and problem-solving skills.</p>
+</div>
+
+<!-- ACCOUNTING -->
+<div id="accounting" class="content-box">
+<button class="back" onclick="back()">⬅ Back</button>
+<h2 style="color:#f59e0b;">💰 Accounting</h2>
+<p>📌 Topic: Bookkeeping Basics</p>
+<!-- ACCOUNTING ARTICLE -->
+<a href="https://www.accountingcoach.com/" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="subject acc">
+<h3>💰 Accounting Article</h3>
+<p>Understand bookkeeping, assets, liabilities, and financial records.</p>
+</div>
+</a>
+<h3>🧠 Activity</h3>
+<p>List 3 assets and 3 liabilities.</p>
+
+<h3>📌 Notes</h3>
+<p>Accounting records financial transactions in businesses.</p>
+</div>
+
+<!-- ECONOMICS -->
+<div id="economics" class="content-box">
+<button class="back" onclick="back()">⬅ Back</button>
+<h2 style="color:#ef4444;">📈 Economics</h2>
+<p>📌 Topic: Supply & Demand</p>
+<!-- ECONOMICS ARTICLE -->
+<a href="https://www.investopedia.com/economics-4689801" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="subject eco">
+<h3>📈 Economics Article</h3>
+<p>Explore supply, demand, markets, and how economies work.</p>
+</div>
+</a>
+
+<h3>🧠 Activity</h3>
+<p>Explain why prices increase when demand is high.</p>
+
+<h3>📌 Notes</h3>
+<p>Economics studies how people use resources.</p>
+</div>
+
+<!-- COMPUTER -->
+<div id="computer" class="content-box">
+<button class="back" onclick="back()">⬅ Back</button>
+<h2 style="color:#8b5cf6;">💻 Computer</h2>
+<p>📌 Topic: Introduction to Coding</p>
+<!-- COMPUTER ARTICLE -->
+<a href="https://www.w3schools.com/whatis/" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="subject com">
+<h3>💻 Computer Article</h3>
+<p>Learn coding, web development, HTML, and computer basics.</p>
+</div>
+</a>
+
+<div class="card green">
+<h3>💻 Computer Basics</h3>
+
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/zOjov-2OZ0E"
+title="Computer Video"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<h3>🧠 Activity</h3>
+<p>What is HTML used for?</p>
+
+<h3>📌 Notes</h3>
+<p>Computer studies teach coding and digital skills.</p>
+</div>
+
+<!-- EXTRA SECTION -->
+<div class="section">
+<h2>💡 Study Tips</h2>
+<p>✔ Study daily in small sessions</p>
+<p>✔ Practice past questions</p>
+<p>✔ Revise before exams</p>
+</div>
+
+<div class="section">
+<h2>🌟 Motivation</h2>
+<p>“Success is built one small step at a time.” 🚀</p>
+</div>
+
+<div class="section">
+<h2>📚 Helpful Resources</h2>
+<a href="https://www.khanacademy.org" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="card blue">📘 Khan Academy</div>
+</a>
+
+<a href="https://www.w3schools.com" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="card green">📊 W3Schools</div>
+</a>
+
+<a href="https://www.bbc.co.uk/bitesize" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="card orange">📖 BBC Bitesize</div>
+</a>
+
+<a href="https://quizlet.com" target="_blank" style="text-decoration:none; color:inherit;">
+<div class="card purple">🧠 Quizlet</div>
+</a>
+</div>
+</div>
+
+<footer>
+<p>📧 edudov.project@gmail.com</p>
+<p>© 2026 EduDov</p>
+</footer>
+
+<script>
+function openSub(id){
+document.getElementById("menu").style.display="none";
+document.getElementById(id).style.display="block";
+}
+
+function back(){
+document.querySelectorAll(".content-box").forEach(e=>e.style.display="none");
+document.getElementById("menu").style.display="grid";
+}
+</script>
+
+</body>
+</html>
